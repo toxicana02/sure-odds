@@ -82,7 +82,7 @@ function App() {
         <div className="card"><h3>✅ Jana - ODDS 2 IMESHINDA</h3><div className="win"><span>Arsenal Win</span><b>WON ✅ 1.45</b></div><div className="win"><span>Man City Over 1.5</span><b>WON ✅ 1.30</b></div><p className="total">Total: 1.88 🔥</p></div>
 
         <h2 style={{textAlign:'center'}}>💰 CHAGUA KIFURUSHI</h2>
-        <div className="price-box"><h3>⚡ SIKU 1</h3><div className="price">Tsh 3,000</div><p>✅ Odds 2 ya leo tu</p><a className="btn" href={`https://wa.me/${WHATSAPP}?text=NATAKA%20SIKU%201`} target="_blank" rel="noreferrer">NIMESHALIPA - TUMA RISITI</a></div>
+        <div className="price-box"><h3>⚡ SIKU 1</h3><div className="price">Tsh 2,000</div><p>✅ Odds 2 ya leo tu</p><a className="btn" href={`https://wa.me/${WHATSAPP}?text=NATAKA%20SIKU%201`} target="_blank" rel="noreferrer">NIMESHALIPA - TUMA RISITI</a></div>
         <div className="price-box"><h3>🔥 WIKI 1</h3><div className="price">Tsh 10,000</div><p>✅ Odds 2 kila siku wiki nzima</p><a className="btn" href={`https://wa.me/${WHATSAPP}?text=NATAKA%20WIKI%201`} target="_blank" rel="noreferrer">NIMESHALIPA - TUMA RISITI</a></div>
         <div className="price-box"><h3>👑 MWEZI 1</h3><div className="price">Tsh 25,000</div><p>✅ Odds 2 kila siku + Bonus</p><a className="btn" href={`https://wa.me/${WHATSAPP}?text=NATAKA%20MWEZI%201`} target="_blank" rel="noreferrer">NIMESHALIPA - TUMA RISITI</a></div>
 
