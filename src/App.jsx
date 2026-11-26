@@ -34,9 +34,9 @@ function App() {
         <div className="container">
           <div className="vip-card glow-green">
             <div className="live-badge">🟢 LEO • ODDS 2</div><h2>🔥 ODDS 2 - YA LEO</h2>
-            <div className="win"><span>Arsenal Win</span><b>1.45</b></div>
-            <div className="win"><span>Man City Over 1.5</span><b>1.30</b></div>
-            <div className="total-box"><span>TOTAL</span><b>1.88</b></div>
+            <div className="win"><span>SHAKHTAR VS FENERBAHCE HOME/WIN</span><b>1.65</b></div>
+            <div className="win"><span>SABAH VS BARCELONA Over3.5</span><b>1.40</b></div>
+            <div className="total-box"><span>TOTAL</span><b>2.20</b></div>
             <p className="confidence">Confidence 95% 🔥🔥🔥</p>
           </div>
           <a className="btn" href={`https://wa.me/${WHATSAPP}?text=NIMELIPIA%20SIKU`} target="_blank" rel="noreferrer">💬 MSAADA WHATSAPP</a>
