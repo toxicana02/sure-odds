@@ -51,7 +51,7 @@ function App() {
       <div className="app bg-wiki"><div className="overlay-wiki">
         <div className="header header-wiki"><h1>🔥 VIP - WIKI 1</h1><p>ODDS 2 KILA SIKU • SIKU 7</p><button onClick={() => setPage('home')} className="back-btn">⬅ Rudi Nyumbani</button></div>
         <div className="container">
-          <div className="vip-card glow-gold"><div className="live-badge yellow">🟢 LEO • ODDS 2</div><h2>🔥 ODDS 2 - LEO</h2><div className="win"><span>Arsenal Win</span><b>1.45</b></div><div className="win"><span>Man City Over 1.5</span><b>1.30</b></div><div className="total-box"><span>TOTAL</span><b>1.88</b></div></div>
+          <div className="vip-card glow-gold"><div className="live-badge yellow">🟢 LEO • ODDS 2</div><h2>🔥 ODDS 2 - LEO</h2><div className="win"><span>Man utd Win/draw</span><b>1.45</b></div><div className="win"><span>barcelona Over 3.5</span><b>1.50</b></div><div className="total-box"><span>TOTAL</span><b>2.50</b></div></div>
           <div className="vip-card glow-gold"><div className="live-badge">📅 KESHO • ODDS 2</div><h2>💰 ODDS 2 - KESHO</h2><div className="win"><span>Real Madrid Win</span><b>1.50</b></div><div className="win"><span>Inter Over 1.5</span><b>1.35</b></div><div className="total-box"><span>TOTAL</span><b>2.02</b></div></div>
           <a className="btn" href={`https://wa.me/${WHATSAPP}?text=NIMELIPIA%20WIKI`} target="_blank" rel="noreferrer">💬 MSAADA WHATSAPP</a>
         </div>
