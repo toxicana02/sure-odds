@@ -18,41 +18,29 @@ function App() {
     else { setMsg(`❌ Password sio sahihi kwa ${selectedPlan}. Lipa kwanza!`) }
   }
 
-  // ===== NAVBAR - INAONEKANA KILA PAGE =====
+  // ===== NAVBAR - HOME NA HISTORY TU! VIP IMEFICHWA =====
   const Navbar = () => (
-    <div style={{display:'flex', gap:'8px', justifyContent:'center', flexWrap:'wrap', padding:'10px', background:'#000', position:'sticky', top:0, zIndex:100}}>
-      <button onClick={() => setPage('home')} style={{padding:'8px 14px', borderRadius:'20px', border:'1px solid #333', background: page==='home' ? '#facc15' : '#222', color: page==='home' ? '#000' : '#fff', fontWeight:'bold', cursor:'pointer'}}>🏠 HOME</button>
-      <button onClick={() => setPage('history')} style={{padding:'8px 14px', borderRadius:'20px', border:'1px solid #333', background: page==='history' ? '#22c55e' : '#222', color: page==='history' ? '#000' : '#fff', fontWeight:'bold', cursor:'pointer'}}>📊 HISTORY</button>
-      <button onClick={() => setPage('vip-siku')} style={{padding:'8px 14px', borderRadius:'20px', border:'1px solid #333', background:'#222', color:'#fff', fontWeight:'bold', cursor:'pointer'}}>⚡ VIP SIKU</button>
-      <button onClick={() => setPage('vip-wiki')} style={{padding:'8px 14px', borderRadius:'20px', border:'1px solid #333', background:'#222', color:'#fff', fontWeight:'bold', cursor:'pointer'}}>🔥 VIP WIKI</button>
-      <button onClick={() => setPage('vip-mwezi')} style={{padding:'8px 14px', borderRadius:'20px', border:'1px solid #333', background:'#222', color:'#facc15', fontWeight:'bold', cursor:'pointer'}}>👑 VIP MWEZI</button>
+    <div style={{display:'flex', gap:'10px', justifyContent:'center', padding:'12px', background:'#000', position:'sticky', top:0, zIndex:100, borderBottom:'1px solid #333'}}>
+      <button onClick={() => setPage('home')} style={{padding:'10px 22px', borderRadius:'20px', border:'none', background: page==='home' ? '#facc15' : '#222', color: page==='home' ? '#000' : '#fff', fontWeight:'bold', cursor:'pointer', fontSize:'15px'}}>🏠 HOME</button>
+      <button onClick={() => setPage('history')} style={{padding:'10px 22px', borderRadius:'20px', border:'none', background: page==='history' ? '#22c55e' : '#222', color: page==='history' ? '#000' : '#fff', fontWeight:'bold', cursor:'pointer', fontSize:'15px'}}>📊 HISTORY</button>
     </div>
   )
 
-  // ===== PAGE YA HISTORY - MIKAKA ILIYOPITA =====
+  // ===== PAGE YA HISTORY =====
   if (page === 'history') {
     return (
       <div className="app home-bg"><div className="overlay">
         <Navbar />
         <div className="header"><h1>📊 HISTORY YA MIKEKA</h1><p>MIKEKA YOTE ILIYOPITA - WON ✅</p><span className="badge">✅ WIN RATE 94% • SIKU 27 WON / 30</span></div>
         <div className="container">
-          <div className="card" style={{borderColor:'#22c55e'}}>
-            <h3 style={{color:'#22c55e', textAlign:'center'}}>🔥 MWEZI HUU: 27 WON ✅ | 3 LOST ❌</h3>
-            <p style={{textAlign:'center', color:'#aaa', fontSize:'13px'}}>Kila mwezi tunashinda zaidi ya 90%</p>
-          </div>
+          <div className="card" style={{borderColor:'#22c55e', textAlign:'center'}}><h3 style={{color:'#22c55e'}}>🔥 MWEZI HUU: 27 WON ✅ | 3 LOST ❌</h3><p style={{color:'#aaa', fontSize:'13px'}}>Kila mwezi tunashinda zaidi ya 90%</p></div>
 
           <div className="card"><p style={{color:'#aaa', fontSize:'13px'}}>📅 26 NOV 2026 • ODDS 2</p><h3>Arsenal Win + Man City Over 1.5</h3><div className="win"><span>Total Odds</span><b>1.88</b></div><p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'8px', fontSize:'18px'}}>✅ WON - Tsh 10,000 ➡️ 18,800</p></div>
-
           <div className="card"><p style={{color:'#aaa', fontSize:'13px'}}>📅 25 NOV 2026 • ODDS 2</p><h3>Real Madrid Win + Inter Over 1.5</h3><div className="win"><span>Total Odds</span><b>2.02</b></div><p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'8px', fontSize:'18px'}}>✅ WON - Tsh 10,000 ➡️ 20,200</p></div>
-
           <div className="card"><p style={{color:'#aaa', fontSize:'13px'}}>📅 24 NOV 2026 • ODDS 2</p><h3>Man United Win + Liverpool Over 1.5</h3><div className="win"><span>Total Odds</span><b>1.95</b></div><p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'8px', fontSize:'18px'}}>✅ WON - Tsh 10,000 ➡️ 19,500</p></div>
-
           <div className="card"><p style={{color:'#aaa', fontSize:'13px'}}>📅 23 NOV 2026 • ODDS 2</p><h3>Barcelona Win + Bayern Over 1.5</h3><div className="win"><span>Total Odds</span><b>1.90</b></div><p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'8px', fontSize:'18px'}}>✅ WON - Tsh 10,000 ➡️ 19,000</p></div>
-
           <div className="card" style={{opacity:0.7}}><p style={{color:'#aaa', fontSize:'13px'}}>📅 22 NOV 2026 • ODDS 2</p><h3>Chelsea Win + PSG Over 1.5</h3><div className="win"><span>Total Odds</span><b>2.10</b></div><p style={{color:'#ef4444', fontWeight:'bold', textAlign:'center', marginTop:'8px', fontSize:'18px'}}>❌ LOST</p></div>
-
           <div className="card"><p style={{color:'#aaa', fontSize:'13px'}}>📅 21 NOV 2026 • ODDS 2</p><h3>Juventus Win + Dortmund Over 1.5</h3><div className="win"><span>Total Odds</span><b>1.85</b></div><p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'8px', fontSize:'18px'}}>✅ WON - Tsh 10,000 ➡️ 18,500</p></div>
-
           <div className="card"><p style={{color:'#aaa', fontSize:'13px'}}>📅 20 NOV 2026 • ODDS 2</p><h3>Man City Win + Arsenal Over 1.5</h3><div className="win"><span>Total Odds</span><b>1.92</b></div><p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'8px', fontSize:'18px'}}>✅ WON - Tsh 10,000 ➡️ 19,200</p></div>
 
           <a className="btn" href={`https://wa.me/${WHATSAPP}?text=NATAKA%20KUJIUNGA%20VIP%20NIMEONA%20HISTORY`} target="_blank" rel="noreferrer">💰 NATAKA KUSHINDA KAMA HAWA - JIUNGE VIP</a>
@@ -61,11 +49,11 @@ function App() {
     )
   }
 
-  // ===== VIP SIKU =====
+  // ===== VIP SIKU - IMEFICHWA, INAFUNGUKA NA PASSWORD TU =====
   if (page === 'vip-siku') {
     return (
-      <div className="app bg-siku"><div className="overlay-siku"><Navbar />
-        <div className="header header-siku"><h1>⚡ VIP - SIKU 1</h1><p>ODDS 2 YA LEO TU</p></div>
+      <div className="app bg-siku"><div className="overlay-siku">
+        <div className="header header-siku"><h1>⚡ VIP - SIKU 1</h1><p>ODDS 2 YA LEO TU</p><button onClick={() => setPage('home')} className="back-btn">⬅ Rudi Nyumbani</button></div>
         <div className="container">
           <div className="vip-card glow-green"><div className="live-badge">🟢 LEO • ODDS 2</div><h2>🔥 ODDS 2 - YA LEO</h2><div className="win"><span>Arsenal Win</span><b>1.45</b></div><div className="win"><span>Man City Over 1.5</span><b>1.30</b></div><div className="total-box"><span>TOTAL</span><b>1.88</b></div><p className="confidence">Confidence 95% 🔥🔥🔥</p></div>
           <a className="btn" href={`https://wa.me/${WHATSAPP}?text=MSAADA`} target="_blank" rel="noreferrer">💬 MSAADA WHATSAPP</a>
@@ -74,11 +62,11 @@ function App() {
     )
   }
 
-  // ===== VIP WIKI =====
+  // ===== VIP WIKI - IMEFICHWA =====
   if (page === 'vip-wiki') {
     return (
-      <div className="app bg-wiki"><div className="overlay-wiki"><Navbar />
-        <div className="header header-wiki"><h1>🔥 VIP - WIKI 1</h1><p>ODDS 2 KILA SIKU • SIKU 7</p></div>
+      <div className="app bg-wiki"><div className="overlay-wiki">
+        <div className="header header-wiki"><h1>🔥 VIP - WIKI 1</h1><p>ODDS 2 KILA SIKU • SIKU 7</p><button onClick={() => setPage('home')} className="back-btn">⬅ Rudi Nyumbani</button></div>
         <div className="container">
           <div className="vip-card glow-gold"><div className="live-badge yellow">🟢 LEO • ODDS 2</div><h2>🔥 ODDS 2 - LEO</h2><div className="win"><span>Arsenal Win</span><b>1.45</b></div><div className="win"><span>Man City Over 1.5</span><b>1.30</b></div><div className="total-box"><span>TOTAL</span><b>1.88</b></div></div>
           <div className="vip-card glow-gold"><div className="live-badge">📅 KESHO • ODDS 2</div><h2>💰 ODDS 2 - KESHO</h2><div className="win"><span>Real Madrid Win</span><b>1.50</b></div><div className="win"><span>Inter Over 1.5</span><b>1.35</b></div><div className="total-box"><span>TOTAL</span><b>2.02</b></div></div>
@@ -87,11 +75,11 @@ function App() {
     )
   }
 
-  // ===== VIP MWEZI =====
+  // ===== VIP MWEZI - IMEFICHWA =====
   if (page === 'vip-mwezi') {
     return (
-      <div className="app bg-mwezi"><div className="overlay-mwezi"><Navbar />
-        <div className="header header-mwezi"><h1>👑 VIP - MWEZI 1</h1><p>KING 👑 • ODDS 2 KILA SIKU • SIKU 30</p></div>
+      <div className="app bg-mwezi"><div className="overlay-mwezi">
+        <div className="header header-mwezi"><h1>👑 VIP - MWEZI 1</h1><p>KING 👑 • ODDS 2 KILA SIKU • SIKU 30</p><button onClick={() => setPage('home')} className="back-btn gold-btn">⬅ Rudi Nyumbani</button></div>
         <div className="container">
           <div className="king-banner">👑 WEWE NI KING - UMEFUNGUA YOTE! 👑</div>
           <div className="vip-card glow-diamond"><div className="live-badge">💎 LEO • ODDS 2 + BONUS</div><h2>🔥 ODDS 2 - LEO</h2><div className="win"><span>Arsenal Win</span><b>1.45</b></div><div className="win"><span>Man City Over 1.5</span><b>1.30</b></div><div className="total-box"><span>TOTAL</span><b>1.88</b></div><div style={{marginTop:'12px', borderTop:'1px dashed #facc15', paddingTop:'10px'}}><p style={{color:'#facc15', textAlign:'center', fontWeight:'bold'}}>🎁 BONUS YA MWEZI:</p><div className="win"><span>⭐ Juventus Win - SINGLE</span><b>1.95</b></div></div></div>
@@ -117,6 +105,7 @@ function App() {
 
         <div className="lock">
           <h2>🔒 INGIA VIP</h2>
+          <p style={{fontSize:'13px', color:'#aaa'}}>Umelipia kipi? Chagua kwanza:</p>
           <div className="plan-selector">
             <button className={selectedPlan==='SIKU' ? 'plan-btn active-siku' : 'plan-btn'} onClick={() => setSelectedPlan('SIKU')}>⚡ SIKU</button>
             <button className={selectedPlan==='WIKI' ? 'plan-btn active-wiki' : 'plan-btn'} onClick={() => setSelectedPlan('WIKI')}>🔥 WIKI</button>
