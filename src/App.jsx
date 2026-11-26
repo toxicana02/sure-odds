@@ -18,7 +18,7 @@ function App() {
     else { setMsg(`❌ Password sio sahihi kwa ${selectedPlan}. Lipa kwanza!`) }
   }
 
-  // ===== NAVBAR - HOME NA HISTORY TU! VIP IMEFICHWA =====
+  // ===== NAVBAR - HOME NA HISTORY TU =====
   const Navbar = () => (
     <div style={{display:'flex', gap:'10px', justifyContent:'center', padding:'12px', background:'#000', position:'sticky', top:0, zIndex:100, borderBottom:'1px solid #333'}}>
       <button onClick={() => setPage('home')} style={{padding:'10px 22px', borderRadius:'20px', border:'none', background: page==='home' ? '#facc15' : '#222', color: page==='home' ? '#000' : '#fff', fontWeight:'bold', cursor:'pointer', fontSize:'15px'}}>🏠 HOME</button>
@@ -26,7 +26,7 @@ function App() {
     </div>
   )
 
-  // ===== PAGE YA HISTORY =====
+  // ===== HISTORY PAGE =====
   if (page === 'history') {
     return (
       <div className="app home-bg"><div className="overlay">
@@ -49,7 +49,7 @@ function App() {
     )
   }
 
-  // ===== VIP SIKU - IMEFICHWA, INAFUNGUKA NA PASSWORD TU =====
+  // ===== VIP SIKU - IMEFICHWA =====
   if (page === 'vip-siku') {
     return (
       <div className="app bg-siku"><div className="overlay-siku">
@@ -89,12 +89,14 @@ function App() {
     )
   }
 
-  // ===== HOME =====
+  // ===== HOME - HAKUNA ODDS 2 YA LEO, BUTTON KUBWA TU =====
   return (
     <div className="app home-bg"><div className="overlay"><Navbar />
       <div className="header"><h1>SURE ODDS 🤑</h1><p>ODDS 2 YA UHAKIKA KILA SIKU</p><span className="badge">✅ WIN RATE 94%</span></div>
       <div className="container">
-        <div className="card"><h3>✅ LEO - ODDS 2</h3><div className="win"><span>Arsenal Win</span><b>1.45</b></div><div className="win"><span>Man City Over 1.5</span><b>1.30</b></div><p className="total">Total: 1.88 🔥</p><button onClick={() => setPage('history')} style={{width:'100%', padding:'10px', marginTop:'10px', background:'#22c55e', color:'#fff', border:'none', borderRadius:'10px', fontWeight:'bold', cursor:'pointer'}}>📊 ONA HISTORY YOTE - MIKEKA 27 WON ✅</button></div>
+        <button onClick={() => setPage('history')} style={{width:'100%', padding:'22px 10px', background:'linear-gradient(135deg, #22c55e, #16a34a)', color:'#fff', border:'none', borderRadius:'16px', fontWeight:'bold', fontSize:'20px', cursor:'pointer', boxShadow:'0 8px 25px rgba(34,197,94,0.4)', marginBottom:'10px'}}>
+          📊 FUNGUA HISTORY YA MIKEKA<br/><span style={{fontSize:'14px', fontWeight:'normal', opacity:0.9}}>Mikeka 27 WON ✅ • ONA USHAHIDI HAPA</span>
+        </button>
 
         <h2 style={{textAlign:'center'}}>💰 CHAGUA KIFURUSHI</h2>
         <div className="price-box"><h3>⚡ SIKU 1</h3><div className="price">Tsh 3,000</div><p>✅ Odds 2 ya leo tu</p><a className="btn" href={`https://wa.me/${WHATSAPP}?text=NATAKA%20SIKU%201`} target="_blank" rel="noreferrer">NIMESHALIPA - TUMA RISITI</a></div>
