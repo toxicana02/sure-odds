@@ -8,8 +8,8 @@ function App() {
   const [selectedPlan, setSelectedPlan] = useState('SIKU')
 
   const WHATSAPP = "255774277529"
-  const MPESA_NUMBER = "0774277529"
-  const MPESA_JINA = "rosemary msofe"
+  const TIGO_NUMBER = "0774277529"
+  const MIX_BY_YAX_JINA = "rosemary msofe"
 
   const ingiaVIP = () => {
     if (selectedPlan === 'SIKU' && password === "SIKU2026") { setPage('vip-siku'); setMsg('') }
