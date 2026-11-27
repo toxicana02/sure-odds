@@ -7,7 +7,7 @@ function App() {
   const [msg, setMsg] = useState('')
   const [selectedPlan, setSelectedPlan] = useState('SIKU')
 
-  const WHATSAPP = "25577277529"
+  const WHATSAPP = "255774277529"
   const MPESA_NUMBER = "0774277529"
   const MPESA_JINA = "rosemary msofe"
 
