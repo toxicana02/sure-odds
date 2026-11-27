@@ -7,9 +7,9 @@ function App() {
   const [msg, setMsg] = useState('')
   const [selectedPlan, setSelectedPlan] = useState('SIKU')
 
-  const WHATSAPP = "255XXXXXXXXX"
-  const MPESA_NUMBER = "07XX XXX XXX"
-  const MPESA_JINA = "JINA LAKO"
+  const WHATSAPP = "25577277529"
+  const MPESA_NUMBER = "0774277529"
+  const MPESA_JINA = "rosemary msofe"
 
   const ingiaVIP = () => {
     if (selectedPlan === 'SIKU' && password === "SIKU2026") { setPage('vip-siku'); setMsg('') }
