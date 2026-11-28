@@ -26,7 +26,7 @@ function App() {
     </div>
   )
 
-  // ===== FREE ODDS PAGE - IMEBADILISHWA =====
+  // ===== FREE ODDS PAGE - NA HISTORY YA FREE =====
   if (page === 'free') {
     return (
       <div className="app home-bg"><div className="overlay">
@@ -35,23 +35,31 @@ function App() {
         <div className="container">
           <div className="card" style={{borderColor:'#22c55e', textAlign:'center'}}><h3 style={{color:'#22c55e'}}>🔥 FREE ODDS - LEO ZIMESHINDA ✅</h3><p style={{color:'#aaa', fontSize:'13px'}}>Hizi ndio free za leo, zote WON! Ukishinda bure, jiunge VIP upate zaidi!</p></div>
 
-          {/* FREE 1 - MAN UTD vs BRENTFORD */}
+          {/* FREE 1 - MAN UTD */}
           <div className="vip-card glow-green">
             <div className="live-badge">✅ WON • FREE</div>
-            <h2>🎁 FREE ODDS 1</h2>
+            <h2>🎁 FREE ODDS 1 - LEO</h2>
             <div className="win"><span>Man Utd vs Brentford</span><b>Over 2.5</b></div>
             <div className="total-box"><span>MARKET</span><b>Over 2.5 Goals</b></div>
             <p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'10px', fontSize:'18px'}}>✅ WON - Over 2.5 Imekuja!</p>
           </div>
 
-          {/* FREE 2 - LEEDS vs COVENTRY */}
+          {/* FREE 2 - LEEDS */}
           <div className="vip-card glow-green">
             <div className="live-badge">✅ WON • FREE</div>
-            <h2>🎁 FREE ODDS 2</h2>
+            <h2>🎁 FREE ODDS 2 - LEO</h2>
             <div className="win"><span>Leeds vs Coventry</span><b>Home Win</b></div>
             <div className="total-box"><span>MARKET</span><b>1 - Home Win</b></div>
             <p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'10px', fontSize:'18px'}}>✅ WON - Leeds Kameshinda!</p>
           </div>
+
+          {/* ===== HISTORY YA FREE - TU HAPA ===== */}
+          <h2 style={{textAlign:'center', marginTop:'20px', color:'#22c55e'}}>📊 HISTORY YA FREE - ZOTE WON ✅</h2>
+          <div className="card" style={{borderColor:'#22c55e', textAlign:'center'}}><h3 style={{color:'#22c55e'}}>🔥 FREE HISTORY: 2 WON ✅ | 0 LOST ❌</h3><p style={{color:'#aaa', fontSize:'13px'}}>Hata za bure zinashinda! Imagine VIP!</p></div>
+
+          <div className="card"><p style={{color:'#aaa', fontSize:'13px'}}>📅 28 NOV 2026 • FREE</p><h3>Man Utd vs Brentford<br/>Over 2.5</h3><p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'8px', fontSize:'18px'}}>✅ WON</p></div>
+
+          <div className="card"><p style={{color:'#aaa', fontSize:'13px'}}>📅 28 NOV 2026 • FREE</p><h3>Leeds vs Coventry<br/>Home Win</h3><p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'8px', fontSize:'18px'}}>✅ WON</p></div>
 
           <div className="card" style={{textAlign:'center', borderColor:'#facc15'}}>
             <h3>😍 Umeshinda Free? Sasa pata VIP!</h3>
@@ -65,7 +73,7 @@ function App() {
     )
   }
 
-  // ===== HISTORY PAGE =====
+  // ===== HISTORY PAGE - YA VIP TU (HAIKUGUSWA) =====
   if (page === 'history') {
     return (
       <div className="app home-bg"><div className="overlay">
@@ -87,7 +95,6 @@ function App() {
     )
   }
 
-  // ===== VIP SIKU =====
   if (page === 'vip-siku') {
     return (
       <div className="app bg-siku"><div className="overlay-siku">
@@ -100,7 +107,6 @@ function App() {
     )
   }
 
-  // ===== VIP WIKI =====
   if (page === 'vip-wiki') {
     return (
       <div className="app bg-wiki"><div className="overlay-wiki">
@@ -113,7 +119,6 @@ function App() {
     )
   }
 
-  // ===== VIP MWEZI =====
   if (page === 'vip-mwezi') {
     return (
       <div className="app bg-mwezi"><div className="overlay-mwezi">
@@ -127,7 +132,6 @@ function App() {
     )
   }
 
-  // ===== HOME =====
   return (
     <div className="app home-bg"><div className="overlay"><Navbar />
       <div className="header"><h1>SURE ODDS 🤑</h1><p>ODDS 2 YA UHAKIKA KILA SIKU</p><span className="badge">✅ WIN RATE 94%</span></div>
