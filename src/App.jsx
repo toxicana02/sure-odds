@@ -18,7 +18,6 @@ function App() {
     else { setMsg(`❌ Password sio sahihi kwa ${selectedPlan}. Lipa kwanza!`) }
   }
 
-  // ===== NAVBAR - HOME + FREE + HISTORY =====
   const Navbar = () => (
     <div style={{display:'flex', gap:'8px', justifyContent:'center', padding:'12px', background:'#000', position:'sticky', top:0, zIndex:100, borderBottom:'1px solid #333', flexWrap:'wrap'}}>
       <button onClick={() => setPage('home')} style={{padding:'10px 18px', borderRadius:'20px', border:'none', background: page==='home' ? '#facc15' : '#222', color: page==='home' ? '#000' : '#fff', fontWeight:'bold', cursor:'pointer', fontSize:'14px'}}>🏠 HOME</button>
@@ -27,30 +26,31 @@ function App() {
     </div>
   )
 
-  // ===== FREE ODDS PAGE - MPYA =====
+  // ===== FREE ODDS PAGE - IMEBADILISHWA =====
   if (page === 'free') {
     return (
       <div className="app home-bg"><div className="overlay">
         <Navbar />
         <div className="header"><h1>🎁 FREE ODDS YA LEO</h1><p>BILA MALIPO - JARIBU KWANZA</p><span className="badge">🟢 LEO • 28 NOV 2026</span></div>
         <div className="container">
-          <div className="card" style={{borderColor:'#22c55e', textAlign:'center'}}><h3 style={{color:'#22c55e'}}>🔥 FREE ODDS 2 - YA LEO</h3><p style={{color:'#aaa', fontSize:'13px'}}>Hii ni ya kujaribu bure. Ukishinda, jiunge VIP upate zaidi!</p></div>
+          <div className="card" style={{borderColor:'#22c55e', textAlign:'center'}}><h3 style={{color:'#22c55e'}}>🔥 FREE ODDS - LEO ZIMESHINDA ✅</h3><p style={{color:'#aaa', fontSize:'13px'}}>Hizi ndio free za leo, zote WON! Ukishinda bure, jiunge VIP upate zaidi!</p></div>
 
+          {/* FREE 1 - MAN UTD vs BRENTFORD */}
           <div className="vip-card glow-green">
-            <div className="live-badge">🟢 FREE • ODDS 2</div>
-            <h2>🎁 FREE ODDS - LEO</h2>
-            <div className="win"><span>Nottingham Win</span><b>1.55</b></div>
-            <div className="win"><span>Chelsea Over 1.5</span><b>1.30</b></div>
-            <div className="total-box"><span>TOTAL</span><b>2.01</b></div>
-            <p className="confidence">Confidence 90% 🔥🔥</p>
-            <p style={{textAlign:'center', color:'#aaa', fontSize:'13px', marginTop:'8px'}}>⏰ Cheza kabla mechi haijaanza</p>
+            <div className="live-badge">✅ WON • FREE</div>
+            <h2>🎁 FREE ODDS 1</h2>
+            <div className="win"><span>Man Utd vs Brentford</span><b>Over 2.5</b></div>
+            <div className="total-box"><span>MARKET</span><b>Over 2.5 Goals</b></div>
+            <p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'10px', fontSize:'18px'}}>✅ WON - Over 2.5 Imekuja!</p>
           </div>
 
-          <div className="vip-card" style={{borderColor:'#facc15'}}>
-            <div className="live-badge yellow">⭐ BONUS FREE - SINGLE</div>
-            <h2>💰 SINGLE YA BURE</h2>
-            <div className="win"><span>Arsenal Over 1.5</span><b>1.40</b></div>
-            <p style={{textAlign:'center', color:'#facc15', fontSize:'13px', marginTop:'8px'}}>Single ya kujaribu - stake ndogo</p>
+          {/* FREE 2 - LEEDS vs COVENTRY */}
+          <div className="vip-card glow-green">
+            <div className="live-badge">✅ WON • FREE</div>
+            <h2>🎁 FREE ODDS 2</h2>
+            <div className="win"><span>Leeds vs Coventry</span><b>Home Win</b></div>
+            <div className="total-box"><span>MARKET</span><b>1 - Home Win</b></div>
+            <p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'10px', fontSize:'18px'}}>✅ WON - Leeds Kameshinda!</p>
           </div>
 
           <div className="card" style={{textAlign:'center', borderColor:'#facc15'}}>
@@ -73,7 +73,6 @@ function App() {
         <div className="header"><h1>📊 HISTORY YA MIKEKA</h1><p>MIKEKA YOTE ILIYOPITA - WON ✅</p><span className="badge">✅ WIN RATE 94% • SIKU 27 WON / 30</span></div>
         <div className="container">
           <div className="card" style={{borderColor:'#22c55e', textAlign:'center'}}><h3 style={{color:'#22c55e'}}>🔥 MWEZI HUU: 27 WON ✅ | 3 LOST ❌</h3><p style={{color:'#aaa', fontSize:'13px'}}>Kila mwezi tunashinda zaidi ya 90%</p></div>
-          
           <div className="card"><p style={{color:'#aaa', fontSize:'13px'}}>📅 27 NOV 2026 • ODDS 2</p><h3>Nottingham + Chelsea Home Win</h3><div className="win"><span>Total Odds</span><b>2.50</b></div><p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'8px', fontSize:'18px'}}>✅ WON - Tsh 10,000 ➡️ 25,000</p></div>
           <div className="card"><p style={{color:'#aaa', fontSize:'13px'}}>📅 26 NOV 2026 • ODDS 2</p><h3>doncaster + huddersfield 10ver 1.5</h3><div className="win"><span>Total Odds</span><b>2.88</b></div><p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'8px', fontSize:'18px'}}>✅ WON - Tsh 10,000 ➡️ 28,800</p></div>
           <div className="card"><p style={{color:'#aaa', fontSize:'13px'}}>📅 25 NOV 2026 • ODDS 2</p><h3>chapecoense vs palmeiras 1win</h3><div className="win"><span>Total Odds</span><b>2.02</b></div><p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'8px', fontSize:'18px'}}>✅ WON - Tsh 10,000 ➡️ 20,200</p></div>
@@ -82,14 +81,13 @@ function App() {
           <div className="card" style={{opacity:0.7}}><p style={{color:'#aaa', fontSize:'13px'}}>📅 22 NOV 2026 • ODDS 2</p><h3>bremen + hamburger sv 1win</h3><div className="win"><span>Total Odds</span><b>2.10</b></div><p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'8px', fontSize:'18px'}}>✅ WON - Tsh 10,000 ➡️ 21,000</p></div>
           <div className="card"><p style={{color:'#aaa', fontSize:'13px'}}>📅 21 NOV 2026 • ODDS 2</p><h3>monaco + auxerre draw</h3><div className="win"><span>Total Odds</span><b>2.05</b></div><p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'8px', fontSize:'18px'}}>✅ WON - Tsh 10,000 ➡️ 20,500</p></div>
           <div className="card"><p style={{color:'#aaa', fontSize:'13px'}}>📅 20 NOV 2026 • ODDS 2</p><h3>sao salvador + primeiro de agost away$over 2.50</h3><div className="win"><span>Total Odds</span><b>2.60</b></div><p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'8px', fontSize:'18px'}}>✅ WON - Tsh 10,000 ➡️ 25,200</p></div>
-
           <a className="btn" href={`https://wa.me/${WHATSAPP}?text=NATAKA%20KUJIUNGA%20VIP%20NIMEONA%20HISTORY`} target="_blank" rel="noreferrer">💰 NATAKA KUSHINDA KAMA HAWA - JIUNGE VIP</a>
         </div>
       </div></div>
     )
   }
 
-  // ===== VIP SIKU - IMEFICHWA =====
+  // ===== VIP SIKU =====
   if (page === 'vip-siku') {
     return (
       <div className="app bg-siku"><div className="overlay-siku">
@@ -102,7 +100,7 @@ function App() {
     )
   }
 
-  // ===== VIP WIKI - IMEFICHWA =====
+  // ===== VIP WIKI =====
   if (page === 'vip-wiki') {
     return (
       <div className="app bg-wiki"><div className="overlay-wiki">
@@ -115,7 +113,7 @@ function App() {
     )
   }
 
-  // ===== VIP MWEZI - IMEFICHWA =====
+  // ===== VIP MWEZI =====
   if (page === 'vip-mwezi') {
     return (
       <div className="app bg-mwezi"><div className="overlay-mwezi">
@@ -137,18 +135,14 @@ function App() {
         <button onClick={() => setPage('free')} style={{width:'100%', padding:'22px 10px', background:'linear-gradient(135deg, #22c55e, #16a34a)', color:'#fff', border:'none', borderRadius:'16px', fontWeight:'bold', fontSize:'20px', cursor:'pointer', boxShadow:'0 8px 25px rgba(34,197,94,0.4)', marginBottom:'10px'}}>
           🎁 FUNGUA FREE ODDS YA LEO<br/><span style={{fontSize:'14px', fontWeight:'normal', opacity:0.9}}>Bila Malipo • Jaribu Kwanza</span>
         </button>
-
         <button onClick={() => setPage('history')} style={{width:'100%', padding:'18px 10px', background:'#1f2937', color:'#fff', border:'1px solid #374151', borderRadius:'16px', fontWeight:'bold', fontSize:'17px', cursor:'pointer', marginBottom:'16px'}}>
           📊 FUNGUA HISTORY YA MIKEKA<br/><span style={{fontSize:'13px', fontWeight:'normal', opacity:0.9}}>Mikeka 27 WON ✅ • ONA USHAHIDI HAPA</span>
         </button>
-
         <h2 style={{textAlign:'center'}}>💰 CHAGUA KIFURUSHI</h2>
         <div className="price-box"><h3>⚡ SIKU 1</h3><div className="price">Tsh 2,000</div><p>✅ Odds 2 ya leo tu</p><a className="btn" href={`https://wa.me/${WHATSAPP}?text=NATAKA%20SIKU%201`} target="_blank" rel="noreferrer">NIMESHALIPA - TUMA RISITI</a></div>
         <div className="price-box"><h3>🔥 WIKI 1</h3><div className="price">Tsh 8,000</div><p>✅ Odds 2 kila siku wiki nzima</p><a className="btn" href={`https://wa.me/${WHATSAPP}?text=NATAKA%20WIKI%201`} target="_blank" rel="noreferrer">NIMESHALIPA - TUMA RISITI</a></div>
         <div className="price-box"><h3>👑 MWEZI 1</h3><div className="price">Tsh 20,000</div><p>✅ Odds 2 kila siku + Bonus</p><a className="btn" href={`https://wa.me/${WHATSAPP}?text=NATAKA%20MWEZI%201`} target="_blank" rel="noreferrer">NIMESHALIPA - TUMA RISITI</a></div>
-
         <div className="card" style={{textAlign:'center', borderColor:'#facc15'}}><h3>📱 LIPA HAPA - MIX BY YAS</h3><p style={{margin:'12px 0'}}>MIX BY YAS: <b style={{color:'#facc15', fontSize:'22px'}}>{MIX_BY_YAS_NUMBER}</b></p><p>Jina: <b>{MIX_BY_YAS_JINA}</b></p></div>
-
         <div className="lock">
           <h2>🔒 INGIA VIP</h2>
           <p style={{fontSize:'13px', color:'#aaa'}}>Umelipia kipi? Chagua kwanza:</p>
