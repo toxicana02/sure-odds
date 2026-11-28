@@ -9,7 +9,7 @@ function App() {
 
   const WHATSAPP = "255774277529"
   const TIGO_NUMBER = "0774277529"
-  const MIX_BY_YAX_JINA = "rosemary msofe"
+  const MIX_BY_YAX_JINA = "rosemary"
 
   const ingiaVIP = () => {
     if (selectedPlan === 'SIKU' && password === "SIKU2026") { setPage('vip-siku'); setMsg('') }
@@ -34,7 +34,8 @@ function App() {
         <div className="header"><h1>📊 HISTORY YA MIKEKA</h1><p>MIKEKA YOTE ILIYOPITA - WON ✅</p><span className="badge">✅ WIN RATE 94% • SIKU 27 WON / 30</span></div>
         <div className="container">
           <div className="card" style={{borderColor:'#22c55e', textAlign:'center'}}><h3 style={{color:'#22c55e'}}>🔥 MWEZI HUU: 27 WON ✅ | 3 LOST ❌</h3><p style={{color:'#aaa', fontSize:'13px'}}>Kila mwezi tunashinda zaidi ya 90%</p></div>
-
+          
+          <div className="card"><p style={{color:'#aaa', fontSize:'13px'}}>📅 27 NOV 2026 • ODDS 2</p><h3>Nottingham + Chelsea<br/>Home Win</h3><div className="win"><span>Total Odds</span><b>2.50</b></div><p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'8px', fontSize:'18px'}}>✅ WON - Tsh 10,000 ➡️ 25,000</p></div>
           <div className="card"><p style={{color:'#aaa', fontSize:'13px'}}>📅 26 NOV 2026 • ODDS 2</p><h3>doncaster + huddersfield 10ver 1.5</h3><div className="win"><span>Total Odds</span><b>2.88</b></div><p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'8px', fontSize:'18px'}}>✅ WON - Tsh 10,000 ➡️ 28,800</p></div>
           <div className="card"><p style={{color:'#aaa', fontSize:'13px'}}>📅 25 NOV 2026 • ODDS 2</p><h3>chapecoense vs palmeiras 1win</h3><div className="win"><span>Total Odds</span><b>2.02</b></div><p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'8px', fontSize:'18px'}}>✅ WON - Tsh 10,000 ➡️ 20,200</p></div>
           <div className="card"><p style={{color:'#aaa', fontSize:'13px'}}>📅 24 NOV 2026 • ODDS 2</p><h3>ranger + aberdeen 1win$over 1.5</h3><div className="win"><span>Total Odds</span><b>2.45</b></div><p style={{color:'#22c55e', fontWeight:'bold', textAlign:'center', marginTop:'8px', fontSize:'18px'}}>✅ WON - Tsh 10,000 ➡️ 24,500</p></div>
@@ -99,9 +100,9 @@ function App() {
         </button>
 
         <h2 style={{textAlign:'center'}}>💰 CHAGUA KIFURUSHI</h2>
-        <div className="price-box"><h3>⚡ SIKU 1</h3><div className="price">Tsh 3,000</div><p>✅ Odds 2 ya leo tu</p><a className="btn" href={`https://wa.me/${WHATSAPP}?text=NATAKA%20SIKU%201`} target="_blank" rel="noreferrer">NIMESHALIPA - TUMA RISITI</a></div>
-        <div className="price-box"><h3>🔥 WIKI 1</h3><div className="price">Tsh 10,000</div><p>✅ Odds 2 kila siku wiki nzima</p><a className="btn" href={`https://wa.me/${WHATSAPP}?text=NATAKA%20WIKI%201`} target="_blank" rel="noreferrer">NIMESHALIPA - TUMA RISITI</a></div>
-        <div className="price-box"><h3>👑 MWEZI 1</h3><div className="price">Tsh 25,000</div><p>✅ Odds 2 kila siku + Bonus</p><a className="btn" href={`https://wa.me/${WHATSAPP}?text=NATAKA%20MWEZI%201`} target="_blank" rel="noreferrer">NIMESHALIPA - TUMA RISITI</a></div>
+        <div className="price-box"><h3>⚡ SIKU 1</h3><div className="price">Tsh 2,000</div><p>✅ Odds 2 ya leo tu</p><a className="btn" href={`https://wa.me/${WHATSAPP}?text=NATAKA%20SIKU%201`} target="_blank" rel="noreferrer">NIMESHALIPA - TUMA RISITI</a></div>
+        <div className="price-box"><h3>🔥 WIKI 1</h3><div className="price">Tsh 8,000</div><p>✅ Odds 2 kila siku wiki nzima</p><a className="btn" href={`https://wa.me/${WHATSAPP}?text=NATAKA%20WIKI%201`} target="_blank" rel="noreferrer">NIMESHALIPA - TUMA RISITI</a></div>
+        <div className="price-box"><h3>👑 MWEZI 1</h3><div className="price">Tsh 20,000</div><p>✅ Odds 2 kila siku + Bonus</p><a className="btn" href={`https://wa.me/${WHATSAPP}?text=NATAKA%20MWEZI%201`} target="_blank" rel="noreferrer">NIMESHALIPA - TUMA RISITI</a></div>
 
         <div className="card" style={{textAlign:'center', borderColor:'#facc15'}}><h3>📱 LIPA HAPA M-PESA</h3><p style={{margin:'12px 0'}}>M-PESA: <b style={{color:'#facc15', fontSize:'22px'}}>{MPESA_NUMBER}</b></p><p>Jina: <b>{MPESA_JINA}</b></p></div>
 
