@@ -8,8 +8,8 @@ function App() {
   const [selectedPlan, setSelectedPlan] = useState('SIKU')
 
   const WHATSAPP = "255774277529"
-  const TIGO_NUMBER = "0774277529"
-  const MIX_BY_YAX_JINA = "rosemary"
+  const MIX_BY_YAS_NUMBER = "0774277529"
+  const MIX_BY_YAS_JINA = "rosemary"
 
   const ingiaVIP = () => {
     if (selectedPlan === 'SIKU' && password === "SIKU2026") { setPage('vip-siku'); setMsg('') }
@@ -18,13 +18,52 @@ function App() {
     else { setMsg(`❌ Password sio sahihi kwa ${selectedPlan}. Lipa kwanza!`) }
   }
 
-  // ===== NAVBAR - HOME NA HISTORY TU =====
+  // ===== NAVBAR - HOME + FREE + HISTORY =====
   const Navbar = () => (
-    <div style={{display:'flex', gap:'10px', justifyContent:'center', padding:'12px', background:'#000', position:'sticky', top:0, zIndex:100, borderBottom:'1px solid #333'}}>
-      <button onClick={() => setPage('home')} style={{padding:'10px 22px', borderRadius:'20px', border:'none', background: page==='home' ? '#facc15' : '#222', color: page==='home' ? '#000' : '#fff', fontWeight:'bold', cursor:'pointer', fontSize:'15px'}}>🏠 HOME</button>
-      <button onClick={() => setPage('history')} style={{padding:'10px 22px', borderRadius:'20px', border:'none', background: page==='history' ? '#22c55e' : '#222', color: page==='history' ? '#000' : '#fff', fontWeight:'bold', cursor:'pointer', fontSize:'15px'}}>📊 HISTORY</button>
+    <div style={{display:'flex', gap:'8px', justifyContent:'center', padding:'12px', background:'#000', position:'sticky', top:0, zIndex:100, borderBottom:'1px solid #333', flexWrap:'wrap'}}>
+      <button onClick={() => setPage('home')} style={{padding:'10px 18px', borderRadius:'20px', border:'none', background: page==='home' ? '#facc15' : '#222', color: page==='home' ? '#000' : '#fff', fontWeight:'bold', cursor:'pointer', fontSize:'14px'}}>🏠 HOME</button>
+      <button onClick={() => setPage('free')} style={{padding:'10px 18px', borderRadius:'20px', border:'none', background: page==='free' ? '#22c55e' : '#222', color: page==='free' ? '#000' : '#fff', fontWeight:'bold', cursor:'pointer', fontSize:'14px'}}>🎁 FREE ODDS</button>
+      <button onClick={() => setPage('history')} style={{padding:'10px 18px', borderRadius:'20px', border:'none', background: page==='history' ? '#3b82f6' : '#222', color: page==='history' ? '#000' : '#fff', fontWeight:'bold', cursor:'pointer', fontSize:'14px'}}>📊 HISTORY</button>
     </div>
   )
+
+  // ===== FREE ODDS PAGE - MPYA =====
+  if (page === 'free') {
+    return (
+      <div className="app home-bg"><div className="overlay">
+        <Navbar />
+        <div className="header"><h1>🎁 FREE ODDS YA LEO</h1><p>BILA MALIPO - JARIBU KWANZA</p><span className="badge">🟢 LEO • 28 NOV 2026</span></div>
+        <div className="container">
+          <div className="card" style={{borderColor:'#22c55e', textAlign:'center'}}><h3 style={{color:'#22c55e'}}>🔥 FREE ODDS 2 - YA LEO</h3><p style={{color:'#aaa', fontSize:'13px'}}>Hii ni ya kujaribu bure. Ukishinda, jiunge VIP upate zaidi!</p></div>
+
+          <div className="vip-card glow-green">
+            <div className="live-badge">🟢 FREE • ODDS 2</div>
+            <h2>🎁 FREE ODDS - LEO</h2>
+            <div className="win"><span>Nottingham Win</span><b>1.55</b></div>
+            <div className="win"><span>Chelsea Over 1.5</span><b>1.30</b></div>
+            <div className="total-box"><span>TOTAL</span><b>2.01</b></div>
+            <p className="confidence">Confidence 90% 🔥🔥</p>
+            <p style={{textAlign:'center', color:'#aaa', fontSize:'13px', marginTop:'8px'}}>⏰ Cheza kabla mechi haijaanza</p>
+          </div>
+
+          <div className="vip-card" style={{borderColor:'#facc15'}}>
+            <div className="live-badge yellow">⭐ BONUS FREE - SINGLE</div>
+            <h2>💰 SINGLE YA BURE</h2>
+            <div className="win"><span>Arsenal Over 1.5</span><b>1.40</b></div>
+            <p style={{textAlign:'center', color:'#facc15', fontSize:'13px', marginTop:'8px'}}>Single ya kujaribu - stake ndogo</p>
+          </div>
+
+          <div className="card" style={{textAlign:'center', borderColor:'#facc15'}}>
+            <h3>😍 Umeshinda Free? Sasa pata VIP!</h3>
+            <p style={{color:'#aaa', fontSize:'14px'}}>VIP ina Odds 2 kila siku + Bonus. Win Rate 94%!</p>
+            <a className="btn" href={`https://wa.me/${WHATSAPP}?text=NATAKA%20KUJIUNGA%20VIP%20NIMESHINDA%20FREE`} target="_blank" rel="noreferrer">💰 JIUNGE VIP SASA - Tsh 2,000 TU</a>
+          </div>
+
+          <button onClick={() => setPage('home')} className="btn" style={{background:'#222'}}>⬅ RUDI NYUMBANI</button>
+        </div>
+      </div></div>
+    )
+  }
 
   // ===== HISTORY PAGE =====
   if (page === 'history') {
@@ -90,13 +129,17 @@ function App() {
     )
   }
 
-  // ===== HOME - HAKUNA ODDS 2 YA LEO, BUTTON KUBWA TU =====
+  // ===== HOME =====
   return (
     <div className="app home-bg"><div className="overlay"><Navbar />
       <div className="header"><h1>SURE ODDS 🤑</h1><p>ODDS 2 YA UHAKIKA KILA SIKU</p><span className="badge">✅ WIN RATE 94%</span></div>
       <div className="container">
-        <button onClick={() => setPage('history')} style={{width:'100%', padding:'22px 10px', background:'linear-gradient(135deg, #22c55e, #16a34a)', color:'#fff', border:'none', borderRadius:'16px', fontWeight:'bold', fontSize:'20px', cursor:'pointer', boxShadow:'0 8px 25px rgba(34,197,94,0.4)', marginBottom:'10px'}}>
-          📊 FUNGUA HISTORY YA MIKEKA<br/><span style={{fontSize:'14px', fontWeight:'normal', opacity:0.9}}>Mikeka 27 WON ✅ • ONA USHAHIDI HAPA</span>
+        <button onClick={() => setPage('free')} style={{width:'100%', padding:'22px 10px', background:'linear-gradient(135deg, #22c55e, #16a34a)', color:'#fff', border:'none', borderRadius:'16px', fontWeight:'bold', fontSize:'20px', cursor:'pointer', boxShadow:'0 8px 25px rgba(34,197,94,0.4)', marginBottom:'10px'}}>
+          🎁 FUNGUA FREE ODDS YA LEO<br/><span style={{fontSize:'14px', fontWeight:'normal', opacity:0.9}}>Bila Malipo • Jaribu Kwanza</span>
+        </button>
+
+        <button onClick={() => setPage('history')} style={{width:'100%', padding:'18px 10px', background:'#1f2937', color:'#fff', border:'1px solid #374151', borderRadius:'16px', fontWeight:'bold', fontSize:'17px', cursor:'pointer', marginBottom:'16px'}}>
+          📊 FUNGUA HISTORY YA MIKEKA<br/><span style={{fontSize:'13px', fontWeight:'normal', opacity:0.9}}>Mikeka 27 WON ✅ • ONA USHAHIDI HAPA</span>
         </button>
 
         <h2 style={{textAlign:'center'}}>💰 CHAGUA KIFURUSHI</h2>
@@ -104,7 +147,7 @@ function App() {
         <div className="price-box"><h3>🔥 WIKI 1</h3><div className="price">Tsh 8,000</div><p>✅ Odds 2 kila siku wiki nzima</p><a className="btn" href={`https://wa.me/${WHATSAPP}?text=NATAKA%20WIKI%201`} target="_blank" rel="noreferrer">NIMESHALIPA - TUMA RISITI</a></div>
         <div className="price-box"><h3>👑 MWEZI 1</h3><div className="price">Tsh 20,000</div><p>✅ Odds 2 kila siku + Bonus</p><a className="btn" href={`https://wa.me/${WHATSAPP}?text=NATAKA%20MWEZI%201`} target="_blank" rel="noreferrer">NIMESHALIPA - TUMA RISITI</a></div>
 
-        <div className="card" style={{textAlign:'center', borderColor:'#facc15'}}><h3>📱 LIPA HAPA M-PESA</h3><p style={{margin:'12px 0'}}>M-PESA: <b style={{color:'#facc15', fontSize:'22px'}}>{TIGO_NUMBER}</b></p><p>Jina: <b>{MIX_BY_YAX_JINA}</b></p></div>
+        <div className="card" style={{textAlign:'center', borderColor:'#facc15'}}><h3>📱 LIPA HAPA - MIX BY YAS</h3><p style={{margin:'12px 0'}}>MIX BY YAS: <b style={{color:'#facc15', fontSize:'22px'}}>{MIX_BY_YAS_NUMBER}</b></p><p>Jina: <b>{MIX_BY_YAS_JINA}</b></p></div>
 
         <div className="lock">
           <h2>🔒 INGIA VIP</h2>
